@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "CaxUWUNZ2qUCRhfDQt3A4twl38vCVPJrDIrX6ZNzISI=",
+  "Source": "jwt-funder",
+  "BasePath": "_content/jwt-funder",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
