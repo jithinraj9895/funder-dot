@@ -6,7 +6,7 @@ namespace jwt_funder.Core.Data;
 public class FunderContext(DbContextOptions<FunderContext> options) : DbContext(options)
 {
     public DbSet<User> Users { get; set; }
-    
+    public DbSet<Idea> Ideas { get; set; }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<User>()

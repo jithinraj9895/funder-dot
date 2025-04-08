@@ -16,13 +16,13 @@ public class Idea
 
     [ForeignKey("User")]
     [Column("user_id")]
-    public int? UserId { get; set; } // Nullable if foreign key is optional
+    public required int UserId { get; set; } // Nullable if foreign key is optional
     public required User User { get; set; }
 
     [Column("description", TypeName = "TEXT")]
     public required string Description { get; set; }
 
-    [Column("createdDate")]
+    [Column("created_date")]
     public DateTime CreatedDate { get; set; } = DateTime.UtcNow;
 
     [Column("approvals")]

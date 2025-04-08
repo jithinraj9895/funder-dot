@@ -28,14 +28,22 @@ public class AuthController(IFunderRepository funderRepository,JWTService jwtSer
         User? user = await funderRepository.GetUserByUsername(loginRequest.Username);
         if (user != null)
         {
-            if (BCrypt.Net.BCrypt.Verify(loginRequest.Password, user.Password))
+            if (!BCrypt.Net.BCrypt.Verify(loginRequest.Password, user.Password)) return Unauthorized();
+            AuthenticationResponse res = new AuthenticationResponse
             {
-                AuthenticationResponse res = new AuthenticationResponse();
-                res.token = jwtService.GenerateToken(user.Username);
-                return Ok(res);
-            }
+                token = jwtService.GenerateToken(user.Username)
+            };
+            return Ok(res);
         }
         return Unauthorized();
+    }
+
+    [AllowAnonymous]
+    [HttpPost("register")]
+    public void Register([FromBody] UserDto registerRequest)
+    {
+        
+        
     }
     
 }

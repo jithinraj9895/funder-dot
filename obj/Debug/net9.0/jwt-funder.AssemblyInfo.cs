@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("jwt-funder")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+344fee3800d6c4062452979a1536ffbe2bb08d38")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8ea08ea47b6ff45e48f41f534f5fe1a4ee897631")]
 [assembly: System.Reflection.AssemblyProductAttribute("jwt-funder")]
 [assembly: System.Reflection.AssemblyTitleAttribute("jwt-funder")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
