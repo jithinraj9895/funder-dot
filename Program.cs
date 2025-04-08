@@ -3,6 +3,7 @@ using System.Text.Json.Serialization;
 using jwt_funder.Core.Data;
 using jwt_funder.Core.Interfaces;
 using jwt_funder.Core.Repositories;
+using jwt_funder.Services.AuthServices;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -19,6 +20,7 @@ builder.Services.AddControllers().AddJsonOptions(options =>
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IFunderRepository, FunderRepository>();
+builder.Services.AddScoped<JWTService>();
 builder.Services.AddDbContext<FunderContext>
     (options => options.UseNpgsql(builder.Configuration.GetConnectionString("PostgresConnection")));
 builder.Services.AddCors(options =>
@@ -60,7 +62,6 @@ builder.Services.AddAuthorization();
 var app = builder.Build();
 
 app.UseCors("AllowSpecificOrigin");
-app.UseHttpsRedirection();
 
 app.UseAuthentication();
 app.UseAuthorization();

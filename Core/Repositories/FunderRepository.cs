@@ -15,9 +15,9 @@ public class FunderRepository(FunderContext context) : IFunderRepository
         throw new NotImplementedException();
     }
 
-    public Task<User?> GetUserByEmailAsync(string email)
+    public async Task<User?> GetUserByUsername(string username)
     {
-        throw new NotImplementedException();
+        return await _context.Users.AsNoTracking().FirstOrDefaultAsync(data=>data.Username == username);
     }
 
     public async Task<List<User>> GetUsersAsync()

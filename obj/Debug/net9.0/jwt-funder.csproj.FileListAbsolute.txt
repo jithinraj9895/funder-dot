@@ -56,3 +56,4 @@ C:\Users\User\source\repos\jwt-funder\jwt-funder\bin\Debug\net9.0\Microsoft.Exte
 C:\Users\User\source\repos\jwt-funder\jwt-funder\bin\Debug\net9.0\Microsoft.Extensions.Primitives.dll
 C:\Users\User\source\repos\jwt-funder\jwt-funder\bin\Debug\net9.0\Npgsql.dll
 C:\Users\User\source\repos\jwt-funder\jwt-funder\bin\Debug\net9.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+C:\Users\User\source\repos\jwt-funder\jwt-funder\bin\Debug\net9.0\BCrypt.Net-Next.dll
