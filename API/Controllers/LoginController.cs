@@ -17,8 +17,8 @@ namespace jwt_funder.Controllers
         {
             JWTService service = new JWTService(configuration);
             AuthenticationResponse response = new AuthenticationResponse();
-            Console.WriteLine(user.Username);
-            response.token = service.GenerateToken(user.Username);
+            Console.WriteLine(user.Email);
+            response.token = service.GenerateToken(user.Email);
             return Ok(response);
         }
 

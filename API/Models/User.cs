@@ -15,21 +15,22 @@ public class User // Or you could inherit from IdentityUser<int> if using Identi
 {
     [Key]
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+    [Column("id")]
     public int Id { get; set; }
 
-    [Column]
+    [Column("first_name")]
     public string FirstName { get; set; }
 
-    [Column]
+    [Column("last_name")]
     public string LastName { get; set; }
 
-    [Column]
+    [Column("username")]
     public string Username { get; set; }
 
-    [Column]
+    [Column("password")]
     public string Password { get; set; }
 
-    [Column]
+    [Column("role")]
     public Role Role { get; set; }
 
     public IEnumerable<string> GetAuthorities()
